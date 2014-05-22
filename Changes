@@ -3,8 +3,16 @@ Changes from 2013-05-22 00:00:00 +0000 to present.
 ==================================================
 
 ----------------------------------------
-version 0.1 at 2014-05-22 04:36:18 +0000
+version 0.1 at 2014-05-22 04:36:39 +0000
 ----------------------------------------
+
+  Change: a6e72684f32dd854623a159242937675cc601e81
+  Author: Adam Stokes <adam.stokes@ubuntu.com>
+  Date : 2014-05-22 00:36:30 +0000
+
+    start work on client api
+
+    Signed-off-by: Adam Stokes <adam.stokes@ubuntu.com> 
 
   Change: 108fca0ba01f0df0c18e8956ffa1f85984e366b6
   Author: Adam Stokes <adam.stokes@ubuntu.com>
