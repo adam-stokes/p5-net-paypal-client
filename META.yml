@@ -26,4 +26,4 @@ requires:
   Mojo::Log: '0'
   Mojo::URL: '0'
   Mojo::UserAgent: '0'
-version: '0.2'
+version: '0.3'

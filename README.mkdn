@@ -4,7 +4,7 @@ Net::PayPal::Client - PayPal REST client for perl
 
 # VERSION
 
-version 0.2
+version 0.3
 
 # AUTHOR
 

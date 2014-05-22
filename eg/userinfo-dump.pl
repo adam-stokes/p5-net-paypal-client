@@ -14,7 +14,7 @@ my $pp = Net::PayPal->new(
     'secret' => $ENV{PPSECRET},
 );
 
-my $access_token = $pp->access_token->{access_token};
+my $access_token = $pp->refresh($ENV{PPREFRESH_TOKEN})->{access_token};
 
 $log->debug("Access token: " .$access_token);
 
@@ -23,6 +23,6 @@ my $c = Net::PayPal::Client->new(
 );
 
 my $tx =
-  $c->model('Invoice')->all;
+  $c->model('Userinfo')->info;
 
 p $tx;
