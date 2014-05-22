@@ -49,12 +49,10 @@ sub get {
     my $url =
       Mojo::URL->new($self->api_host)->path($path)->query($self->params);
     $self->log->debug(sprintf("GET %s ", $url->to_string));
-    my $tx = $self->ua->get(
-        $url->to_string => {
-            Authorization  => "Bearer " . $self->access_token,
-            "Content-Type" => "application/json"
-        }
-    );
+    my $tx =
+      $self->ua->get(
+        $url->to_string => {Authorization => "Bearer " . $self->access_token}
+      );
     return $self->json->decode($tx->res->body);
 }
 
