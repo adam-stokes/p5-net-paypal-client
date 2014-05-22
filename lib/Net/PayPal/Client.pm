@@ -49,10 +49,12 @@ sub get {
     my $url =
       Mojo::URL->new($self->api_host)->path($path)->query($self->params);
     $self->log->debug(sprintf("GET %s ", $url->to_string));
-    my $tx =
-      $self->ua->get(
-        $url->to_string => {Authorization => "Bearer " . $self->access_token}
-      );
+    my $tx = $self->ua->get(
+        $url->to_string => {
+            Authorization  => "Bearer " . $self->access_token,
+            "Content-Type" => "application/json"
+        }
+    );
     return $self->json->decode($tx->res->body);
 }
 
@@ -67,9 +69,9 @@ sub post {
 }
 
 sub model {
-  my ($self, $class) = @_;
-  my $model = "Net::PayPal::Model::$class";
-  return use_module($model)->new($self);
+    my ($self, $class) = @_;
+    my $model = "Net::PayPal::Model::$class";
+    return use_module($model)->new($self);
 }
 
 1;
