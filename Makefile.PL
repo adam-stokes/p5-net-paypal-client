@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Net::PayPal::Client is ...",
+  "ABSTRACT" => "PayPal REST client for perl",
   "AUTHOR" => "Adam Stokes <adamjs\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -20,7 +20,13 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Net::PayPal::Client",
   "PREREQ_PM" => {
-    "Mojo::Base" => 0
+    "DDP" => 0,
+    "Module::Runtime" => 0,
+    "Mojo::Base" => 0,
+    "Mojo::JSON" => 0,
+    "Mojo::Log" => 0,
+    "Mojo::URL" => 0,
+    "Mojo::UserAgent" => 0
   },
   "TEST_REQUIRES" => {
     "Mojolicious" => 0,
@@ -30,7 +36,7 @@ my %WriteMakefileArgs = (
     "Test::More" => 0,
     "Test::NoTabs" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.1",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -38,7 +44,13 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "DDP" => 0,
+  "Module::Runtime" => 0,
   "Mojo::Base" => 0,
+  "Mojo::JSON" => 0,
+  "Mojo::Log" => 0,
+  "Mojo::URL" => 0,
+  "Mojo::UserAgent" => 0,
   "Mojolicious" => 0,
   "Pod::Elemental::Transformer::List" => 0,
   "Pod::Weaver::Section::WarrantyDisclaimer" => 0,

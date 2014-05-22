@@ -1,4 +1,10 @@
+requires "DDP" => "0";
+requires "Module::Runtime" => "0";
 requires "Mojo::Base" => "0";
+requires "Mojo::JSON" => "0";
+requires "Mojo::Log" => "0";
+requires "Mojo::URL" => "0";
+requires "Mojo::UserAgent" => "0";
 
 on 'test' => sub {
   requires "Mojolicious" => "0";

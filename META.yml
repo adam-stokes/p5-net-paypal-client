@@ -1,5 +1,5 @@
 ---
-abstract: 'Net::PayPal::Client is ...'
+abstract: 'PayPal REST client for perl'
 author:
   - 'Adam Stokes <adamjs@cpan.org>'
 build_requires:
@@ -19,5 +19,11 @@ meta-spec:
   version: '1.4'
 name: Net-PayPal-Client
 requires:
+  DDP: '0'
+  Module::Runtime: '0'
   Mojo::Base: '0'
-version: '0.001'
+  Mojo::JSON: '0'
+  Mojo::Log: '0'
+  Mojo::URL: '0'
+  Mojo::UserAgent: '0'
+version: '0.1'
